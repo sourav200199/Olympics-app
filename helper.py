@@ -49,15 +49,15 @@ def fetch_tally(df, yr, country):
 
 def olympics_over_time(df):
     #Participating countries over the years
-    cot = df.drop_duplicates(['Year', 'region'])['Year'].value_counts().reset_index().sort_values('index')
+    cot = df.drop_duplicates(['Year', 'region'])['Year'].value_counts().reset_index()#.sort_values('index')
     cot.rename(columns={'index':'Year','Year': 'No. of Countries'},inplace=True)
     
     #Events over the years
-    eot = df.drop_duplicates(['Year', 'Event'])['Year'].value_counts().reset_index().sort_values('index')
+    eot = df.drop_duplicates(['Year', 'Event'])['Year'].value_counts().reset_index()#.sort_values('index')
     eot.rename(columns={'index':'Year','Year': 'No. of Events'},inplace=True)
     
     #Athletes over the years
-    at = df.drop_duplicates(['Year', 'Name'])['Year'].value_counts().reset_index().sort_values('index')
+    at = df.drop_duplicates(['Year', 'Name'])['Year'].value_counts().reset_index()#.sort_values('index')
     at.rename(columns={'index':'Year','Year': 'No. of Athletes'},inplace=True)
 
     return cot, eot, at
