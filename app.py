@@ -74,17 +74,17 @@ if menu == 'At a Glance':
     cot, eot, at = helper.olympics_over_time(df)
     # Participating Countries over the years
     st.title('Participating Countries over the years')
-    fig = px.line(cot, x='Year', y='No. of Countries')
+    fig = px.bar(cot, x='Year', y='No. of Countries')
     st.plotly_chart(fig)
 
     # Events over the years
     st.title('Events over the years')
-    fig = px.line(eot, x='Year', y='No. of Events')
+    fig = px.bar(eot, x='Year', y='No. of Events')
     st.plotly_chart(fig)
 
     # Athletes over the years
     st.title('Athletes over the years')
-    fig = px.line(at, x='Year', y='No. of Athletes')
+    fig = px.bar(at, x='Year', y='No. of Athletes')
     st.plotly_chart(fig)
 
     # List of most successful athletes across all olympics
