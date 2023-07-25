@@ -211,7 +211,7 @@ if menu == 'Athlete analysis':
 
     # Add 'Overall' in the sport list as well
     st.header('Men/Women participation over the years')
-    sports.insert(0, 'Overall')
+    # sports.insert(0, 'Overall')
     sport = st.selectbox('Select a sport', sports)
 
     men_women = helper.men_women(df, sport)
